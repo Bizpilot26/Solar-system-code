@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #010103; /* A very deep, almost-black blue for deep space */
+    overflow: hidden; /* Prevents scrollbars from appearing, keeping focus on the universe */
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace; /* Clean, tech-inspired font */
+}
+
+canvas {
+    display: block; /* Ensures the canvas fills its entire space correctly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Places the universe behind any potential UI elements */
+}
+
+/* Stylized Heads-Up Display (HUD) overlay for information */
+.hud {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: rgba(0, 243, 255, 0.8); /* Cool, cyan UI color */
+    z-index: 10; /* Ensures the text is always readable over the space scene */
+    pointer-events: none; /* Crucial: clicks pass through the HUD to interact with the universe */
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); /* Subtle cyber-glow */
+}
+
+.hud h1 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.hud p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.35); /* Dimmer subtext */
+    line-height: 1.4;
+}
